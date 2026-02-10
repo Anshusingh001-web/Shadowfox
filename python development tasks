@@ -1,0 +1,15 @@
+# 1. Variables
+# 1
+pi = 22/7
+print(pi)
+print(type(pi))
+
+# 2
+#for = 4  # there is a syntaxerror: invalid syntax and for is a reserved keyword in python
+
+# 3
+P = 1000
+R = 5
+T = 3
+SI = (P*R*T)/100
+print("Simple Interest =", SI)
