@@ -1,0 +1,21 @@
+# 2. Numbers
+# 1
+def format_value(num1, num2):
+    return format(num1, num2)
+result = format_value(145, 'o')
+print(result)                            # result = 221 and 'o' is octal representation
+
+# 2
+pi = 3.14
+r = 84
+area = pi*r*r
+print("Area =",area)
+water = int(area*1.4)
+print("Total water =", water)           # result = Area = 22155.84 and Total water = 31018
+
+# 3
+distance = 490
+time_minutes = 7
+time_seconds = time_minutes*60
+speed = int(distance/time_seconds)
+print("speed =", speed , "m/s")          # result = speed = 1m/s
