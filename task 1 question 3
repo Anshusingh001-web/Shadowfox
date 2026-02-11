@@ -1,0 +1,39 @@
+# 3. List
+
+justice_league = ["Superman", "Batman", "Wonder Woman", "Flash", "Aquaman", "Green Lantern"]
+print("Initial List:", justice_league)
+
+# 1
+num_members = len(justice_league)
+print(f"Number of members: {num_members}")
+
+# 2
+justice_league.extend(["Batgirl", "Nightwing"])
+print("After adding Batgirl and Nightwing:", justice_league)
+
+# 3
+# We remove her from her current position and insert her at index 0
+justice_league.remove("Wonder Woman")
+justice_league.insert(0, "Wonder Woman")
+print("After moving Wonder Woman to the beginning:", justice_league)
+
+# 4
+
+flash_index = justice_league.index("Flash")
+
+justice_league.remove("Green Lantern")
+
+justice_league.insert(flash_index + 1, "Green Lantern")
+print("After moving Green Lantern between Flash and Aquaman:", justice_league)
+
+# 5
+justice_league = ["Cyborg", "Shazam", "Hawkgirl", "Martian Manhunter", "Green Arrow"]
+print("New Team assembled:", justice_league)
+
+# 6
+justice_league.sort()
+print("Sorted List:", justice_league)
+
+# Bonus 
+new_leader = justice_league[0]
+print(f"The new leader is: {new_leader}")
