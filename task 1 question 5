@@ -1,0 +1,58 @@
+# 6. Dictionary
+
+# 1. Create a list of friends.
+friends = ["Aditya", "Rahul", "Sneha", "Vikram", "Priya"]
+name_tuples = [(name, len(name)) for name in friends]
+
+print("Original List:", friends)
+print("List of Tuples:", name_tuples)
+print("\n")
+
+# 2. Create two dictionaries with expense categories and amounts
+your_expenses = {
+    "Hotel": 1200,
+    "Food": 800,
+    "Transportation": 500,
+    "Attractions": 300,
+    "Miscellaneous": 200
+}
+
+partner_expenses = {
+    "Hotel": 1000,
+    "Food": 900,
+    "Transportation": 600,
+    "Attractions": 400,
+    "Miscellaneous": 150
+}
+
+# 1. Calculate total expenses for each person
+your_total = sum(your_expenses.values())
+partner_total = sum(partner_expenses.values())
+
+print("Result")
+print(f"Your Total Expenses: {your_total}")
+print(f"Partner's Total Expenses: {partner_total}")
+
+# 2. Determine who spent more money overall
+if your_total > partner_total:
+    print("Result: You spent more money overall.")
+elif partner_total > your_total:
+    print("Result: Your partner spent more money overall.")
+else:
+    print("Result: Both spent the exact same amount.")
+
+# 3. Find the category with a "significant difference"
+
+max_difference = 0
+significant_category = ""
+
+for category in your_expenses:
+    # Calculate the absolute difference for the current category
+    
+    diff = abs(your_expenses[category] - partner_expenses[category])
+    
+    if diff > max_difference:
+        max_difference = diff
+        significant_category = category
+
+print(f"Significant difference found in '{significant_category}' with a difference of {max_difference}.")
